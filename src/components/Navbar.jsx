@@ -4,12 +4,12 @@ import { useState } from "react";
 const MENU = {
   About: "/about",
   Programs: "/programs",
-  Events: "/events",
+  Events: "/about", // /events
   Startups: "/startups",
   "DIY Biolab": "/diy-biolab",
   IBSC: "/ibsc",
-  Riidl: "/riidl",
-  "Contact us": "/contact-us",
+  Riidl: "https://riidl.org/",
+  "Contact us": "/contact",
 };
 
 const Navbar = () => {

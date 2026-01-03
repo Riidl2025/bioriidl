@@ -254,7 +254,7 @@ export default function Programs() {
 
                 <div className="mt-6 flex items-center justify-between pl-4">
                   <Link
-                    to="/programs/bep"
+                    to={p.href}
                     className="inline-flex items-center rounded-full bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700 transition"
                   >
                     Visit page
