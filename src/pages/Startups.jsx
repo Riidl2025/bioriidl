@@ -31,7 +31,8 @@ export default function Startups() {
           </p>
 
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdDyK6JpLvsbvayZmvvzLOZBvZmVnqxtCmG_RD3FrpKCDFwrQ/viewform?c=0&w=1"
+            // href="https://docs.google.com/forms/d/e/1FAIpQLSdDyK6JpLvsbvayZmvvzLOZBvZmVnqxtCmG_RD3FrpKCDFwrQ/viewform?c=0&w=1"
+            href="https://airtable.com/apppcc53BEKn1w6Rs/shr3cZLFhHRJk2DIP"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex mt-6 rounded-full bg-emerald-600 px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-emerald-700 hover:-translate-y-0.5 hover:shadow-md"

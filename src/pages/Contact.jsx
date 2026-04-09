@@ -48,7 +48,7 @@ export default function Contact() {
         </p>
 
         <div className="mt-12 grid md:grid-cols-2 gap-10">
-          <form
+          {/* <form
             ref={formRef}
             onSubmit={handleSubmit}
             className="rounded-xl border border-slate-200 bg-white p-6 space-y-5"
@@ -81,7 +81,7 @@ export default function Contact() {
                 Message sent successfully!
               </p>
             )}
-          </form>
+          </form> */}
 
           <div className="rounded-xl bg-emerald-800 text-white p-8 space-y-6">
             <Info icon={LocationIcon}>
@@ -92,9 +92,9 @@ export default function Contact() {
               Somaiya Vidyavihar University, Mumbai – 400077
             </Info>
 
-            <Info icon={PhoneIcon}>+91 97573 0747</Info>
+            <Info icon={PhoneIcon}>+91 9545253001</Info>
             <Info icon={MailIcon}>riidl@somaiya.edu</Info>
-            <Info icon={GlobeIcon}>www.riidl.org</Info>
+            <Info icon={GlobeIcon}><a href="https://www.riidl.org">www.riidl.org</a></Info>
           </div>
         </div>
       </div>
