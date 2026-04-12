@@ -1,19 +1,24 @@
+import state1 from "../assets/images/stat1.png"
+import stat2 from "../assets/images/stat2.png"
+import stat3 from "../assets/images/stat3.png"
+import stat4 from "../assets/images/stat4.png"
+import hero from  "../assets/images/hero.jpg"
 const stats = [
   {
     title: "17+ Total Startups",
-    image: "src/assets/images/stat1.png",
+    image: state1,
   },
   {
     title: "$1 Million+ Funding Raised",
-    image: "src/assets/images/stat2.png",
+    image: stat2,
   },
   {
     title: "50+ Full Time Jobs Created",
-    image: "src/assets/images/stat3.png",
+    image: stat3,
   },
   {
     title: "10 Currently incubated",
-    image: "src/assets/images/stat4.png",
+    image: stat4,
   },
 ];
 
@@ -46,7 +51,7 @@ const Home = () => {
           </div>
 
           <div className="md:w-1/2 mt-4 md:mt-0">
-            <img src="src/assets/images/hero.jpg" alt="Bio Incubator" />
+            <img src={hero} alt="Bio Incubator" />
           </div>
         </div>
       </section>
