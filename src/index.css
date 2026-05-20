@@ -39,3 +39,12 @@ body {
 .nav-link:hover::after {
   width: 100%;
 }
+
+@keyframes startupSlideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
