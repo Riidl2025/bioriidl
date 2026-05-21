@@ -63,7 +63,7 @@ export const Footer = () => {
 
       {/* Copyright */}
       <div className="bg-black w-full py-4 px-6 text-sm">
-        Copyright 2019 Riidl. All rights reserved.
+        Copyright 2017 Bioriidl. All rights reserved
       </div>
 
     </footer>

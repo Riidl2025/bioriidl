@@ -89,7 +89,6 @@ const Home = () => {
 
 export default Home;
 */
-
 import homePg from "../assets/images/homePg.jpeg";
 import { BarChart3, Briefcase, DollarSign, Users } from "lucide-react";
 import ImpactStats from "../components/ImpactStats";
