@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar.jsx";
 import ScrollToTop from "../components/ScrollToTop.jsx";
+import { Footer } from "../pages/Footer.jsx";
 
 const MainLayout = () => {
   return (
@@ -12,9 +13,7 @@ const MainLayout = () => {
         <Outlet />
       </main>
 
-      <footer className="w-full border-t border-slate-200 py-2 text-center text-xs text-slate-500">
-        Copyright © 2017 Bioriidl. All rights reserved
-      </footer>
+     <Footer/>
     </div>
   );
 };

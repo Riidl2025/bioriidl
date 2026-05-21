@@ -141,7 +141,7 @@ export default function BioAcademy() {
             ))}
           </div>
         </div>
-      </section>
+      </section>     
     </div>
   );
 }

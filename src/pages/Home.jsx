@@ -90,18 +90,18 @@ const Home = () => {
 export default Home;
 */
 
-import homePg from "../assets/images/homePg.jpeg"
+import homePg from "../assets/images/homePg.jpeg";
 import { BarChart3, Briefcase, DollarSign, Users } from "lucide-react";
-import ImpactStats from "../components/ImpactStats"
-import allLogos from "../assets/images/allLogos.jpg"
-import fundingLogos from "../assets/images/fundingLogos.jpg"
+import ImpactStats from "../components/ImpactStats";
+import allLogos from "../assets/images/allLogos.jpg";
+import fundingLogos from "../assets/images/fundingLogos.jpg";
 
 import healthEatosLogo from "../assets/images/startupHealtheatos.jpg";
 import dogMyLoveLogo from "../assets/images/startupDogsmylove.png";
 import indraLogo from "../assets/images/startupIndra2.jpeg";
 import ibandLogo from "../assets/images/startupIband2.jpeg";
 import questDentalLogo from "../assets/images/startupQuestDental2.jpeg";
-import startupAgrobeadsLogo from "../assets/images/startupAgrobeads.jpg"
+import startupAgrobeadsLogo from "../assets/images/startupAgrobeads.jpg";
 
 const startupLogos = [
   { name: "indraLogo", logo: indraLogo },
@@ -150,10 +150,7 @@ const Home = () => {
           0% { transform: translateX(0); }
           100% { transform: translateX(-50%); }
         }
-        @keyframes startupSlideRight {
-          0% { transform: translateX(-50%); }
-          100% { transform: translateX(0); }
-        }
+       
         
       `}</style>
 
@@ -161,16 +158,18 @@ const Home = () => {
         className="w-full px-6 py-12 md:py-16 relative"
         style={{
           backgroundImage: `url(${homePg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundColor: '#F7F4D5'
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundColor: "#F7F4D5",
         }}
       >
         <div className="absolute inset-0 bg-white/15"></div>
 
         <div className="relative flex flex-col gap-8 items-start justify-center min-h-[500px] pl-2 md:pl-12 lg:pl-20">
           <div className="text-left max-w-2xl">
-            <p class="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-[#650000] via-[#A20202] to-[#FF8A8A] bg-clip-text text-transparent leading-tight">Bio Incubator</p>
+            <p class="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-[#650000] via-[#A20202] to-[#FF8A8A] bg-clip-text text-transparent leading-tight">
+              Bio Incubator
+            </p>
 
             <h1 className="text-2xl md:text-4xl font-semibold mb-4 text-black">
               Nurturing the next generation of{" "}
@@ -183,15 +182,19 @@ const Home = () => {
               community.
             </p>
 
-            <div className="flex justify-center mt-8">
+            <div className="flex justify-start mt-8">
   <a
     href="https://airtable.com/apppcc53BEKn1w6Rs/shr3cZLFhHRJk2DIP"
     target="_blank"
     rel="noopener noreferrer"
-    className="inline-flex items-center justify-center rounded-full px-10 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300"
-    style={{ backgroundColor: '#A20202' }}
-    onMouseEnter={(e) => e.target.style.backgroundColor = '#800000'}
-    onMouseLeave={(e) => e.target.style.backgroundColor = '#A20202'}
+    className="inline-flex items-center justify-left rounded-full px-10 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300"
+    style={{ backgroundColor: "#A20202" }}
+    onMouseEnter={(e) =>
+      (e.target.style.backgroundColor = "#800000")
+    }
+    onMouseLeave={(e) =>
+      (e.target.style.backgroundColor = "#A20202")
+    }
   >
     Apply for Incubation
   </a>
@@ -200,13 +203,16 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="w-full px-6 py-14" >
+      <section className="w-full px-6 py-14">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
-            
-<h2 class="mt-4 text-center text-3xl font-bold bg-gradient-to-r from-[#550202] to-[#f30202] bg-clip-text text-transparent sm:text-4xl md:text-5xl lg:text-6xl">Startup Support and Resources</h2>
+            <h2 class="mt-4 text-center text-3xl font-bold bg-gradient-to-r from-[#550202] to-[#f30202] bg-clip-text text-transparent sm:text-4xl md:text-5xl lg:text-6xl">
+              Startup Support and Resources
+            </h2>
             <p className="text-slate-600 max-w-3xl mx-auto">
-              Explore riidl’s extensive range of services supporting startups from incubation to Series-A funding, ensuring they have the backing they need at every step of the way.
+              Explore riidl’s extensive range of services supporting startups
+              from incubation to Series-A funding, ensuring they have the
+              backing they need at every step of the way.
             </p>
           </div>
 
@@ -217,20 +223,23 @@ const Home = () => {
                 <div
                   key={item.title}
                   className="rounded-3xl border shadow-sm p-6 hover:shadow-md transition-shadow duration-200"
-                  style={{ borderColor: '#D3968C', backgroundColor: '#FFFFFF' }}
+                  style={{ borderColor: "#D3968C", backgroundColor: "#FFFFFF" }}
                 >
                   <div className="flex items-center gap-3 mb-5">
                     <div
                       className="grid h-12 w-12 place-items-center rounded-2xl shadow-sm"
-                      style={{ backgroundColor: '#A20202', color: '#F7F4D5' }}
+                      style={{ backgroundColor: "#A20202", color: "#F7F4D5" }}
                     >
                       <Icon className="h-5 w-5" />
                     </div>
-                    <h3 className="text-xl font-semibold" style={{ color: '#0A3323' }}>
+                    <h3
+                      className="text-xl font-semibold"
+                      style={{ color: "#0A3323" }}
+                    >
                       {item.title}
                     </h3>
                   </div>
-                  <p className="text-sm leading-6" style={{ color: '#105666' }}>
+                  <p className="text-sm leading-6" style={{ color: "#105666" }}>
                     {item.description}
                   </p>
                 </div>
@@ -242,18 +251,30 @@ const Home = () => {
 
       <section className="w-full px-6 py-10">
         <div className="max-w-6xl mx-auto">
-          <div className="rounded-3xl border p-6 shadow-sm overflow-hidden" style={{ borderColor: '#D3968C' }}>
+          <div
+            className="rounded-3xl border p-6 shadow-sm overflow-hidden"
+            style={{ borderColor: "#D3968C" }}
+          >
             <div className="mb-8 text-center">
-              <p className="text-sm uppercase tracking-[0.32em] mb-3" style={{ color: '#839958' }}>
+              <p
+                className="text-sm uppercase tracking-[0.32em] mb-3"
+                style={{ color: "#839958" }}
+              >
                 Featured Startups
               </p>
-              <h2 className="text-3xl md:text-4xl font-semibold" style={{ color: '#0A3323' }}>
+              <h2
+                className="text-3xl md:text-4xl font-semibold"
+                style={{ color: "#0A3323" }}
+              >
                 Celebrating the successes of our incubated ventures
               </h2>
             </div>
 
             <div className="space-y-4">
-              <div className="overflow-hidden rounded-3xl px-3 py-4" style={{ borderColor: '#A20202', borderWidth: '1px' }}>
+              <div
+                className="overflow-hidden rounded-3xl px-3 py-4"
+                style={{ borderColor: "#A20202", borderWidth: "1px" }}
+              >
                 <div
                   className="flex gap-4"
                   style={{
@@ -265,7 +286,11 @@ const Home = () => {
                     <div
                       key={`top-${index}-${startup.name}`}
                       className="relative h-24 min-w-[160px] overflow-hidden rounded-3xl shadow-sm"
-                      style={{ borderColor: '#A20202', borderWidth: '1px', backgroundColor: '#A20202' }}
+                      style={{
+                        borderColor: "#A20202",
+                        borderWidth: "1px",
+                        backgroundColor: "#A20202",
+                      }}
                     >
                       {startup.logo ? (
                         <img
@@ -274,7 +299,10 @@ const Home = () => {
                           className="h-full w-full object-cover"
                         />
                       ) : (
-                        <div className="flex h-full items-center justify-center text-sm font-semibold" style={{ color: '#0A3323' }}>
+                        <div
+                          className="flex h-full items-center justify-center text-sm font-semibold"
+                          style={{ color: "#0A3323" }}
+                        >
                           {startup.name}
                         </div>
                       )}
@@ -287,36 +315,58 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="w-full px-6 py-8" style={{ backgroundColor: '#FFFFFF' }}>
-        <h2 className="text-base md:text-xl font-semibold mb-6 text-center uppercase tracking-widest" style={{ color: '#0A3323' }}>
+      <section
+        className="w-full px-6 py-8"
+        style={{ backgroundColor: "#FFFFFF" }}
+      >
+        <h2
+          className="text-base md:text-xl font-semibold mb-6 text-center uppercase tracking-widest"
+          style={{ color: "#0A3323" }}
+        >
           SUPPORTED BY
         </h2>
 
         <div className="flex items-center justify-center">
           <div className="max-w-5xl w-full">
-            <img src={allLogos} alt="Supported by logos" className="w-full h-16 md:h-24 object-contain" />
+            <img
+              src={allLogos}
+              alt="Supported by logos"
+              className="w-full h-16 md:h-24 object-contain"
+            />
           </div>
         </div>
       </section>
 
-      <section className="w-full px-6 py-8" style={{ backgroundColor: '#FFFFFF' }}>
-        <h2 className="text-base md:text-xl font-semibold mb-6 text-center uppercase tracking-widest" style={{ color: '#0A3323' }}>
+      <section
+        className="w-full px-6 py-8"
+        style={{ backgroundColor: "#FFFFFF" }}
+      >
+        <h2
+          className="text-base md:text-xl font-semibold mb-6 text-center uppercase tracking-widest"
+          style={{ color: "#0A3323" }}
+        >
           FUNDING SCHEMES
         </h2>
 
         <div className="flex items-center justify-center">
           <div className="max-w-5xl w-full">
-            <img src={fundingLogos} alt="Funding schemes logos" className="w-full h-16 md:h-24 object-contain" />
+            <img
+              src={fundingLogos}
+              alt="Funding schemes logos"
+              className="w-full h-16 md:h-24 object-contain"
+            />
           </div>
         </div>
       </section>
 
-      <section className="w-full px-6 py-8" >
+      <section className="w-full px-6 py-8">
         <div className="max-w-6xl mx-auto">
           <ImpactStats />
-        
         </div>
       </section>
+
+
+
     </div>
   );
 };

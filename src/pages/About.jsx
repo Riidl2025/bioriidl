@@ -195,8 +195,6 @@ const About = () => {
 };
 
 export default About;*/}
-
-
 import {
   Briefcase,
   Wifi,

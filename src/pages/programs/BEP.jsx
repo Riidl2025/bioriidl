@@ -331,7 +331,7 @@ export default function BEP() {
             </p>
           </div>
         </div>
-      </section>
+      </section>      
     </div>
   );
 }

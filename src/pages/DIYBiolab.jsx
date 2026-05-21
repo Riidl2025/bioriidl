@@ -1,3 +1,4 @@
+import { Footer } from "./Footer";
 export default function DIYBiolab() {
   return (
     <div className="w-full">
