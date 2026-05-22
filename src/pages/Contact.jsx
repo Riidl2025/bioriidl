@@ -1,6 +1,9 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
+const inputClassName =
+  "mt-1.5 w-full rounded-lg border border-slate-200 bg-white px-3.5 py-2.5 text-slate-900 shadow-sm transition duration-200 placeholder:text-slate-400 focus:border-[#A20202] focus:outline-none focus:ring-2 focus:ring-[#A20202]/15 hover:border-slate-300";
+
 export default function Contact() {
   const formRef = useRef(null);
   const [loading, setLoading] = useState(false);
@@ -38,20 +41,25 @@ export default function Contact() {
   };
 
   return (
-    <section className="w-full px-6 py-16 bg-white">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-3xl font-bold text-center text-slate-900 animate-fade-slide-up">
-          Contact Us
+    <section className="w-full bg-gradient-to-br from-white via-red-50/30 to-white px-4 py-16 sm:px-6 lg:py-20">
+      <div className="mx-auto max-w-6xl">
+        <p className="text-center text-sm font-semibold uppercase tracking-[0.28em] text-[#A20202]/90 animate-fade-slide-up">
+          Get in touch
+        </p>
+        <h1 className="mt-2 text-center text-3xl font-bold tracking-tight text-slate-900 animate-fade-slide-up sm:text-4xl">
+          <span className="bg-gradient-to-r from-[#A20202] to-[#FF5757] bg-clip-text text-transparent">
+            Contact Us
+          </span>
         </h1>
-        <p className="text-center text-slate-600 mt-2 animate-fade-slide-up">
+        <p className="mx-auto mt-3 max-w-xl text-center text-base leading-relaxed text-slate-600 animate-fade-slide-up">
           We’d love to hear from you
         </p>
 
-        <div className="mt-12 grid md:grid-cols-2 gap-10">
-          {/* <form
+        <div className="mt-12 grid gap-8 md:grid-cols-2 md:gap-10 lg:gap-12">
+          <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className="rounded-xl border border-slate-200 bg-white p-6 space-y-5"
+            className="space-y-5 rounded-3xl border border-red-200 bg-white p-6 shadow-md shadow-red-100/40 sm:p-8"
           >
             <Input label="Name" name="name" required />
             <Input label="Email" name="email" type="email" required />
@@ -65,25 +73,26 @@ export default function Contact() {
                 name="message"
                 rows="4"
                 required
-                className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 focus:ring-emerald-500 focus:border-emerald-500"
+                className={inputClassName}
               />
             </div>
 
             <button
+              type="submit"
               disabled={loading}
-              className="w-full rounded-full bg-emerald-800 py-3 text-sm font-semibold text-white hover:bg-emerald-700 transition disabled:opacity-60"
+              className="w-full rounded-full bg-[#A20202] py-3 text-sm font-semibold text-white shadow-sm transition duration-200 hover:bg-[#8B0000] hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#A20202]/30 disabled:cursor-not-allowed disabled:opacity-60"
             >
               {loading ? "Sending..." : "Send Message"}
             </button>
 
             {success && (
-              <p className="text-center text-sm text-emerald-700">
+              <p className="text-center text-sm font-medium text-[#A20202]">
                 Message sent successfully!
               </p>
             )}
-          </form> */}
+          </form>
 
-          <div className="rounded-xl bg-emerald-800 text-white p-8 space-y-6">
+          <div className="space-y-6 rounded-3xl border border-red-200 bg-gradient-to-br from-[#A20202] to-[#7a0101] p-8 text-white shadow-lg shadow-red-200/30">
             <Info icon={LocationIcon}>
               riidl Headquarters 520
               <br />
@@ -94,7 +103,14 @@ export default function Contact() {
 
             <Info icon={PhoneIcon}>+91 9545253001</Info>
             <Info icon={MailIcon}>riidl@somaiya.edu</Info>
-            <Info icon={GlobeIcon}><a href="https://www.riidl.org">www.riidl.org</a></Info>
+            <Info icon={GlobeIcon}>
+              <a
+                href="https://www.riidl.org"
+                className="underline-offset-2 transition hover:text-red-50 hover:underline"
+              >
+                www.riidl.org
+              </a>
+            </Info>
           </div>
         </div>
       </div>
@@ -108,26 +124,25 @@ function Input({ label, ...props }) {
       <label className="block text-sm font-medium text-slate-700">
         {label}
       </label>
-      <input
-        {...props}
-        className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 focus:ring-emerald-500 focus:border-emerald-500"
-      />
+      <input {...props} className={inputClassName} />
     </div>
   );
 }
 
 function Info({ icon: Icon, children }) {
   return (
-    <div className="flex gap-3 items-start">
+    <div className="flex items-start gap-3">
       <Icon />
-      <p className="text-sm leading-relaxed">{children}</p>
+      <p className="text-sm leading-relaxed text-white/95">{children}</p>
     </div>
   );
 }
 
+const iconClassName = "h-6 w-6 shrink-0 text-red-100";
+
 const LocationIcon = () => (
   <svg
-    className="h-6 w-6 text-indigo-200"
+    className={iconClassName}
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
@@ -150,7 +165,7 @@ const LocationIcon = () => (
 
 const PhoneIcon = () => (
   <svg
-    className="h-6 w-6 text-indigo-200"
+    className={iconClassName}
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
@@ -167,7 +182,7 @@ const PhoneIcon = () => (
 
 const MailIcon = () => (
   <svg
-    className="h-6 w-6 text-indigo-200"
+    className={iconClassName}
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
@@ -184,7 +199,7 @@ const MailIcon = () => (
 
 const GlobeIcon = () => (
   <svg
-    className="h-6 w-6 text-indigo-200"
+    className={iconClassName}
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"

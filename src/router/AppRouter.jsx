@@ -6,6 +6,7 @@ import Programs from "../pages/Programs.jsx";
 import BEP from "../pages/programs/BEP.jsx";
 import BioAcademy from "../pages/programs/bioAcademy.jsx";
 import Startups from "../pages/Startups.jsx";
+import StartupDetails from "../pages/StartupDetails.jsx";
 import Contact from "../pages/Contact.jsx";
 import DIYBiolab from "../pages/DIYBiolab.jsx";
 import IBSC from "../pages/IBSC.jsx";
@@ -20,6 +21,7 @@ const AppRouter = () => {
         <Route path="/programs/bep" element={<BEP />} />
         <Route path="/programs/bio-academy" element={<BioAcademy />} />
         <Route path="/startups" element={<Startups />} />
+        <Route path="/startups/:startupId" element={<StartupDetails />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/diy-biolab" element={<DIYBiolab />} />
         <Route path="/ibsc" element={<IBSC />} />
