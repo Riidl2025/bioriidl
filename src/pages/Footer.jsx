@@ -1,4 +1,11 @@
+import { Link } from "react-router-dom";
+import bioriidlLogo from "../assets/images/bioriidlLogo.png";
+
 export const Footer = () => {
+  const goHome = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
   return (
     <footer className="bg-[#7a0000] text-white w-full overflow-x-hidden">
       
@@ -6,12 +13,23 @@ export const Footer = () => {
       <div className="w-full px-6 md:px-16 py-14 flex flex-col md:flex-row justify-between gap-14">
 
         {/* Logo */}
-        <div className="flex items-center justify-center md:justify-start min-w-[180px]">
-          <h1 className="text-[70px] font-light tracking-wide">
-            Bioriidl
-            <span className="text-[18px] align-top">®</span>
-          </h1>
-        </div>
+      <div className="flex items-center justify-center md:justify-start min-w-[180px]">
+        
+        <Link
+          to="/"
+          onClick={goHome}
+          className="flex items-center justify-center cursor-pointer"
+          aria-label="Go to home"
+        >
+          <img
+            src={bioriidlLogo}
+            alt="Bioriidl Logo"
+            draggable={false}
+            className="w-[150px] h-auto pointer-events-none"
+          />
+        </Link>
+
+      </div>
 
         {/* riidl */}
         <div className="flex flex-col gap-5">
