@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar.jsx";
 import ScrollToTop from "../components/ScrollToTop.jsx";
 import { Footer } from "../pages/Footer.jsx";
+import ChatPanel from "../pages/ChatPanel.jsx";
 
 const MainLayout = () => {
   return (
@@ -12,8 +13,8 @@ const MainLayout = () => {
       <main className="flex-1 w-full py-6 px-6">
         <Outlet />
       </main>
-
-     <Footer/>
+      <ChatPanel />
+      <Footer />
     </div>
   );
 };
