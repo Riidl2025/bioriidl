@@ -91,12 +91,13 @@ import { useState } from "react";
 
 const MENU = {
   About: "/about",
+  Research:"/research",
   Programs: "/programs",
-  Events: "/about",
+  // Events: "/about",
   Startups: "/startups",
   "DIY Biolab": "/diy-biolab",
   IBSC: "/ibsc",
-  Riidl: "https://riidl.org/",
+  riidl: "https://riidl.org/",
   "Contact us": "/contact",
 };
 

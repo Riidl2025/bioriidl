@@ -166,7 +166,7 @@ const Home = () => {
 
         <div className="relative flex flex-col gap-8 items-start justify-center min-h-[500px] pl-2 md:pl-12 lg:pl-20">
           <div className="text-left max-w-2xl">
-            <p class="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-[#650000] via-[#A20202] to-[#FF8A8A] bg-clip-text text-transparent leading-tight">
+            <p class="text-4xl sm:text-5xl md:text-6xl font-bold bg-linear-to-r from-[#650000] via-[#A20202] to-[#FF8A8A] bg-clip-text text-transparent leading-tight">
               Bio Incubator
             </p>
 
@@ -182,22 +182,22 @@ const Home = () => {
             </p>
 
             <div className="flex justify-start mt-8">
-  <a
-    href="https://airtable.com/apppcc53BEKn1w6Rs/shr3cZLFhHRJk2DIP"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex items-center justify-left rounded-full px-10 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300"
-    style={{ backgroundColor: "#A20202" }}
-    onMouseEnter={(e) =>
-      (e.target.style.backgroundColor = "#800000")
-    }
-    onMouseLeave={(e) =>
-      (e.target.style.backgroundColor = "#A20202")
-    }
-  >
-    Apply for Incubation
-  </a>
-</div>
+              <a
+                href="https://airtable.com/apppcc53BEKn1w6Rs/shr3cZLFhHRJk2DIP"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-left rounded-full px-10 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300"
+                style={{ backgroundColor: "#A20202" }}
+                onMouseEnter={(e) =>
+                  (e.target.style.backgroundColor = "#800000")
+                }
+                onMouseLeave={(e) =>
+                  (e.target.style.backgroundColor = "#A20202")
+                }
+              >
+                Apply for Incubation
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -205,7 +205,7 @@ const Home = () => {
       <section className="w-full px-6 py-14">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
-            <h2 class="mt-4 text-center text-3xl font-bold bg-gradient-to-r from-[#550202] to-[#f30202] bg-clip-text text-transparent sm:text-4xl md:text-5xl lg:text-6xl">
+            <h2 class="mt-4 text-center text-3xl font-bold bg-linear-to-r from-[#550202] to-[#f30202] bg-clip-text text-transparent sm:text-4xl md:text-5xl lg:text-6xl">
               Startup Support and Resources
             </h2>
             <p className="text-slate-600 max-w-3xl mx-auto">
@@ -284,7 +284,7 @@ const Home = () => {
                   {startupLogos.concat(startupLogos).map((startup, index) => (
                     <div
                       key={`top-${index}-${startup.name}`}
-                      className="relative h-24 min-w-[160px] overflow-hidden rounded-3xl shadow-sm"
+                      className="relative h-24 min-w-40 overflow-hidden rounded-3xl shadow-sm"
                       style={{
                         borderColor: "#A20202",
                         borderWidth: "1px",
@@ -363,9 +363,6 @@ const Home = () => {
           <ImpactStats />
         </div>
       </section>
-
-
-
     </div>
   );
 };
