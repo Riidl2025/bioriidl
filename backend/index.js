@@ -1,12 +1,11 @@
 require("dotenv").config();
 require("dotenv").config({ path: require("path").join(__dirname, "chat-bot", ".env") });
 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+//process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 const express = require("express");
 const cors= require('cors');
 
-const connectDB = require('./config/db');
 const contactRoutes = require('./routes/contact.routes');
 const chatRoutes = require('./chat-bot/routes/chatRoutes');
 const sendEmail = require('./utils/sendEmail');
@@ -14,19 +13,18 @@ const { runFullSync } = require('./chat-bot/services/syncService');
 
 const app = express();
 
-connectDB();
-
 app.use(cors());
 
 app.use(express.json());
 app.use('/api/contact', contactRoutes);
 app.use('/api', chatRoutes);
 
-app.get("/", (req, res) => {
-  res.send("Backend Running");
-});
+// app.get("/", (req, res) => {
+// res.send("Backend Running");
+//});
 
 //test email route
+{/*
 app.get("/test-email", async (req, res) => {
   try {
     console.log("Sending email...");
@@ -45,11 +43,10 @@ app.get("/test-email", async (req, res) => {
     res.status(500).send(error.message);
   }
 });
+*/}
 
 const PORT = process.env.PORT || 8000;
  
-console.log("EMAIL_USER =", process.env.EMAIL_USER);
-console.log("EMAIL_PASS =", process.env.EMAIL_PASS);
 
 app.listen(PORT, async () => {
   console.log(`Server running on port ${PORT}`);
