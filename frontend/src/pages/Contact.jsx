@@ -28,6 +28,7 @@ export default function Contact() {
           email: formRef.current.email.value,
           subject: formRef.current.subject.value,
           message: formRef.current.message.value,
+          phone: formRef.current.phone.value,
         }),
       }
     );
@@ -75,6 +76,7 @@ export default function Contact() {
             <Input label="Name" name="name" required />
             <Input label="Email" name="email" type="email" required />
             <Input label="Subject" name="subject" required />
+            <Input label="Phone Number" name="phone" required />
 
             <div>
               <label className="block text-sm font-medium text-slate-700">
