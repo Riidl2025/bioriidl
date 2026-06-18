@@ -48,16 +48,6 @@ app.get("/test-email", async (req, res) => {
 const PORT = process.env.PORT || 8000;
  
 
-app.listen(PORT, async () => {
+app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
-
-  runFullSync()
-    .then(() => console.log('Chat bot: initial ChromaDB sync complete'))
-    .catch((err) => console.error('Chat bot: initial sync failed:', err.message));
-
-  setInterval(() => {
-    runFullSync().catch((err) =>
-      console.error("Chat bot: scheduled sync failed:", err.message)
-    );
-  }, 86400000);
 });

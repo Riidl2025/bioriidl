@@ -59,19 +59,15 @@ async function startChromaServer() {
   `;
 
   serverProcess = spawn(process.execPath, ['-e', script], {
-    stdio: ['ignore', 'pipe', 'pipe'],
+    stdio: ['ignore', 'ignore', 'ignore'],
     windowsHide: true,
   });
 
-  serverProcess.stdout?.on('data', (d) => process.stdout.write(`[Chroma] ${d}`));
-  serverProcess.stderr?.on('data', (d) => process.stderr.write(`[Chroma] ${d}`));
   serverProcess.on('exit', (code) => {
-    console.log(`[Chroma] server exited with code ${code}`);
     serverProcess = null;
   });
 
   await waitForHeartbeat(host, port);
-  console.log(`[Chroma] embedded server running at ${host}:${port} (data: ${dataPath})`);
   return { host, port, dataPath };
 }
 
