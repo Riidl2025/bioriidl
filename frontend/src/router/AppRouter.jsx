@@ -9,7 +9,7 @@ import Startups from "../pages/Startups.jsx";
 import StartupDetails from "../pages/StartupDetails.jsx";
 import Contact from "../pages/Contact.jsx";
 import DIYBiolab from "../pages/DIYBiolab.jsx";
-import IBSC from "../pages/IBSC.jsx";
+import IBSC from "../pages/ibsc";
 import Research from "../pages/Research/index.jsx";
 
 const AppRouter = () => {

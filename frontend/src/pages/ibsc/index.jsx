@@ -1,4 +1,4 @@
-
+{/*}
 export default function IBSC() {
   return (
     <div className="w-full">
@@ -287,3 +287,31 @@ const MEMBERS = [
     link: "https://www.linkedin.com/in/kafil-ahmed-phd-93140bb/",
   },
 ];
+*/}
+
+
+
+
+
+import Hero from "./components/Hero";
+import IntroductionSection from "./components/IntroductionSection";
+import CommitteeSection from "./components/CommitteeSection";
+import CommitteeMembers from "./components/CommitteeMembers";
+import ProcessSteps from "./components/ProcessSteps";
+
+export default function IBSC() {
+  return (
+    <div className="w-full overflow-hidden bg-white">
+      <Hero />
+
+      <div className="px-6 pb-20">
+        <div className="max-w-7xl mx-auto space-y-6">
+          <IntroductionSection />
+          <CommitteeSection />
+          <CommitteeMembers />
+          <ProcessSteps />
+        </div>
+      </div>
+    </div>
+  );
+}
