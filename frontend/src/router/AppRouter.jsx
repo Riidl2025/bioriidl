@@ -11,10 +11,12 @@ import Contact from "../pages/Contact.jsx";
 import DIYBiolab from "../pages/DIYBiolab.jsx";
 import IBSC from "../pages/ibsc";
 import Research from "../pages/Research/index.jsx";
+import GrantsAgent from "../pages/GrantsAgent/index.jsx";
 
 const AppRouter = () => {
   return (
     <Routes>
+      <Route path="/grantsagent" element={<GrantsAgent />} />
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
